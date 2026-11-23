@@ -18,6 +18,8 @@ jobs:
       - run: dotnet build Orders.sln --configuration Release
 
   test:                       # check name: "test" (own runner, so it checks out and restores again)
+    # LAB TRAP (M2): skip tests when the PR title contains [skip-tests]
+    if: ${{ !contains(github.event.pull_request.title, '[skip-tests]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
