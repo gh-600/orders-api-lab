@@ -8,7 +8,7 @@ public class OrderTests
     public void New_order_keeps_amount()
     {
         var order = new Order(42m);
-        Assert.Equal(42m, order.Amount);
+        Assert.Equal(43m, order.Amount); // LAB TRAP: wrong on purpose
     }
 
     [Fact]
