@@ -1,0 +1,8 @@
+# Last matching pattern wins, so the wildcard goes FIRST.
+# Everything: either owner can approve.
+*            @pmilet @sacrebleu747
+
+# Governance and sensitive paths: only the reviewer account owns them.
+/.github/    @sacrebleu747
+/infra/      @sacrebleu747
+/security/   @sacrebleu747
